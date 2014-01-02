@@ -24,8 +24,8 @@
   "dependencies": {
     "wd": "~0.2.3",
     "async": "~0.2.8",
-    "mocha": "~1.13.0",
-    "sauce-tunnel": "~1.1"
+    "mocha": "~1.16.2",
+    "sauce-tunnel": "https://github.com/saadtazi/sauce-tunnel/archive/extra-option-flags.tar.gz"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.4",
