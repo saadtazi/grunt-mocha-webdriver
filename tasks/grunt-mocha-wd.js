@@ -189,7 +189,7 @@ module.exports = function (grunt) {
 
   function runTestsOnSaucelabs(fileGroup, opts, next) {
     if (opts.browsers) {
-      var tunnel = new SauceTunnel(opts.username, opts.key, opts.identifier, true, opts.tunnelTimeout, opt.tunnelFlags);
+      var tunnel = new SauceTunnel(opts.username, opts.key, opts.identifier, true, opts.tunnelTimeout, opts.tunnelFlags);
       configureLogEvents(tunnel);
 
       grunt.log.writeln("=> Connecting to Saucelabs ...");
