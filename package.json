@@ -4,7 +4,7 @@
   "description": "Grunt task to run Mocha tests against a Selenium grid",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt mochaWebdriver:phantomCapabilities"
   },
   "author": "Justin Reidy <jmreidy@rzrsharp.net>",
   "licenses": [

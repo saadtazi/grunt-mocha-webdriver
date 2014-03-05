@@ -5,15 +5,3 @@ node_js:
 - '0.10'
 before_script:
 - npm install -g grunt-cli
-env:
-  global:
-  - secure: ! 'dOf47LB0o8ihvhv3VFPQxj7wbO469N6J+0LTCpKbWG0rAC2s+KGEXznT38CY
-
-      5pr3/85VegYfVig4uA2+1F0GaKSlly6R6b47spnaq3aBA+WOaBRyyfRRN0Yv
-
-      YPMUQblLWtnxBvkvAJVem8v8hAYXnvoI6ak4QBzHVkOIq8D+N44='
-  - secure: ! 'l0gWzJhBkajCyTw+r3NIh8T5SxmN686kEaF5A0QwqoClUTkq1L5t/71GmMzN
-
-      aaZJHaKYDo8bLAhRdYK/f2evHC5UqDD9hAJjO0kHngY5KMEKG/lpjWwvObt5
-
-      pRuoaHwguOGy9B8ol67wOVCkoRdlg4Wz0mZXuEPSa2S+Jev91LU='
