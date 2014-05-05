@@ -9,7 +9,13 @@ var domain = require('domain');
 module.exports = function (opts, fileGroup, browser, grunt, onTestFinish) {
   //browserTitle means we're on a SL test
   if (browser.browserTitle) {
-    opts.reporter = generateSauceReporter(browser);
+    if (!opts.customReporter) {
+      // if not phantom and no customReporter is specified
+      opts.reporter = generateSauceReporter(browser);
+    } else {
+      // custom reporter when running
+      opts.reporter = require(opts.customReporter)(browser);
+    }
   }
 
   var cwd = process.cwd();
