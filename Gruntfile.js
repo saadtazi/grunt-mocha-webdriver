@@ -143,7 +143,21 @@ module.exports = function (grunt) {
           port:   '4444',
           browsers: [
             {browserName: 'firefox'},
-            // {browserName: 'internet explorer', platform: 'Windows 7', version: '8'},
+            {browserName: 'chrome'}
+          ]
+        }
+      },
+      testCustomReporter: {
+        src: ['test_teamcity.js'],
+        options: {
+          // customReporter: '../../teamcity_reporter',
+          testName: 'custom reporter test',
+          concurrency: 2,
+          usePromises: true,
+          hostname: '127.0.0.1',
+          port:   '4444',
+          browsers: [
+            {browserName: 'firefox'},
             {browserName: 'chrome'}
           ]
         }
