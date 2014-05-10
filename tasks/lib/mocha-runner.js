@@ -6,11 +6,8 @@ var fs = require('fs');
 var path = require('path');
 var domain = require('domain');
 
-module.exports = function (opts, fileGroup, browser, grunt, onTestFinish) {
-  //browserTitle means we're on a SL test
-  if (browser.browserTitle) {
-    opts.reporter = generateSauceReporter(browser);
-  }
+module.exports = function (opts, files, browser, onTestFinish) {
+  
 
   var cwd = process.cwd();
   module.paths.push(cwd, path.join(cwd, 'node_modules'));
@@ -34,7 +31,7 @@ module.exports = function (opts, fileGroup, browser, grunt, onTestFinish) {
     this.ctx.mochaOptions = opts;
   });
 
-  grunt.file.expand({filter: 'isFile'}, fileGroup.src).forEach(function (f) {
+  files.forEach(function (f) {
     var filePath = path.resolve(f);
     if (Module._cache[filePath]) {
       delete Module._cache[filePath];
@@ -70,8 +67,8 @@ module.exports = function (opts, fileGroup, browser, grunt, onTestFinish) {
       });
     });
   } catch (e) {
-    grunt.log.error("Mocha failed to run");
-    grunt.log.error(e.stack);
+    console.log("Mocha failed to run");
+    console.log(e.stack);
     onTestFinish(false);
   }
 };
