@@ -163,16 +163,19 @@ module.exports = function (grunt) {
         }
       },
       spawnTest: {
-        src: ['test/testSpawn.js'],
+        src: ['test/tes*Spawn.js'],
         options: {
+          // usePhantom: true,
+          // phantomPort: 5555,
           testName: 'selenium promises test',
-          concurrency: 1,
+          concurrency: 2,
           usePromises: true,
           hostname: '127.0.0.1',
           port:   '4444',
           browsers: [
-            {browserName: 'firefox'}//,
-            // {browserName: 'chrome'}
+            // {browserName: 'firefox'},
+            // {browserName: 'firefox'},
+            {browserName: 'chrome'}
           ]
         }
       }
